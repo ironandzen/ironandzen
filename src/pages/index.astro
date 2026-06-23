@@ -1,0 +1,487 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/iron-zen.css';
+---
+<Layout
+  title="Iron & Zen — Together We Transcend"
+  description="Iron & Zen — a men's coliving retreat focused on strength, stillness, and self-mastery."
+>
+  <!-- Atmospheric overlays: scroll-driven color temp + vignette -->
+  <div id="iz-atmos" class="iz-atmos" aria-hidden="true"></div>
+  <div id="iz-vig"   class="iz-vig"   aria-hidden="true"></div>
+
+  <main class="iz-app">
+
+    <!-- ===== HERO ===== -->
+    <header id="iz-hero" class="iz-hero">
+      <div id="iz-hero-photo" class="iz-hero__photo"></div>
+      <div class="iz-fog" aria-hidden="true"></div>
+      <div id="iz-hero-light" class="iz-hero__light" aria-hidden="true"></div>
+      <div class="iz-hero__scrim" aria-hidden="true"></div>
+      <canvas id="iz-embers" class="iz-embers" aria-hidden="true"></canvas>
+
+      <nav class="iz-nav">
+        <span class="iz-lockup iz-lockup--md">Iron <span class="d">✦</span> Zen</span>
+        <a class="iz-chip" href="#apply">Apply</a>
+      </nav>
+
+      <div class="iz-hero__inner">
+        <p class="iz-eyebrow iz-eyebrow--photo">A men's coliving retreat · Off-grid</p>
+        <span class="iz-lockup iz-lockup--xl">Iron <span class="d">✦</span> Zen</span>
+        <h1 class="iz-hero__title">Together We Transcend</h1>
+        <p class="iz-hero__lead">A coliving space for men focused on strength, stillness, and self-mastery.</p>
+        <div class="iz-hero__cta">
+          <a class="iz-btn iz-btn--primary" href="#apply">Join Us</a>
+          <a class="iz-btn iz-btn--ghost"   href="#apply">Get the Guide</a>
+        </div>
+      </div>
+
+      <div class="iz-hero__meta">
+        <span>Opening spots · April</span>
+        <span id="iz-scrollhint">Scroll <span class="a">↓</span></span>
+      </div>
+    </header>
+
+    <!-- ===== INTRO ===== -->
+    <section class="iz-sec iz-sec--center">
+      <p class="iz-eyebrow">Rise Together</p>
+      <p class="iz-display iz-intro">A conscious brotherhood, built on discipline and presence — a one-week sanctuary for strength and stillness.</p>
+    </section>
+
+    <!-- ===== PILLARS ===== -->
+    <section class="iz-sec iz-sec--tight">
+      <p class="iz-eyebrow">The Sanctuary</p>
+      <h2 class="iz-display iz-h2">Three disciplines, one rhythm</h2>
+      <div class="iz-stack">
+        <article class="iz-info">
+          <span class="iz-info__num">01</span>
+          <h3 class="iz-info__title">Iron</h3>
+          <p class="iz-info__body">Train with intention. Move, lift, breathe hard, recover well — strength as a daily practice, not a performance.</p>
+        </article>
+        <article class="iz-info">
+          <span class="iz-info__num">02</span>
+          <h3 class="iz-info__title">Zen</h3>
+          <p class="iz-info__body">Sit in stillness. Daily meditation, breathwork, and silence to quiet the noise you arrived with.</p>
+        </article>
+        <article class="iz-info">
+          <span class="iz-info__num">03</span>
+          <h3 class="iz-info__title">Brotherhood</h3>
+          <p class="iz-info__body">Real men, real talk, around real fire. The conversations you cannot have anywhere else.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== THE DAYS (scroll journey: Dawn → Iron → Fire) ===== -->
+    <section class="iz-sec iz-sec--soft" data-journey="1">
+      <p class="iz-eyebrow">The Days</p>
+      <h2 class="iz-display iz-h2">First light to last fire</h2>
+      <p class="iz-lead" style="font-size:14px;margin-top:12px;letter-spacing:.02em;">The light shifts as you descend — cold dawn, golden work, firelight.</p>
+      <div class="iz-stack iz-stack--cards">
+
+        <article class="iz-card" data-parallax style="min-height:380px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/LuGTZ78J8iIM8spflCeA10N8JfY.jpg?width=600&height=400')"></div>
+          <div class="iz-card__scrim" aria-hidden="true"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">05:30 · Dawn</p>
+            <h3 class="iz-card__title">Stillness</h3>
+            <p class="iz-card__text">Cold water, breath, and a sit in silence before the world wakes.</p>
+          </div>
+        </article>
+
+        <article class="iz-card" data-parallax style="min-height:380px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/vxcglVsVIPyzHGHnobxAcncEAY.jpg?width=300&height=200')"></div>
+          <div class="iz-card__scrim" aria-hidden="true"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">09:00 · Iron</p>
+            <h3 class="iz-card__title">The Work</h3>
+            <p class="iz-card__text">Lift, carry, climb. Hard movement with men who push the same pace.</p>
+          </div>
+        </article>
+
+        <article class="iz-card iz-card--fire" data-parallax style="min-height:420px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/MpQCz1iuthfgSbdda7etC8I.jpg')"></div>
+          <div class="iz-card__scrim" aria-hidden="true" style="background:linear-gradient(to top, rgba(40,16,4,.66) 4%, rgba(120,50,16,.22) 42%, transparent 70%)"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">20:00 · Fire</p>
+            <h3 class="iz-card__title">The Circle</h3>
+            <p class="iz-card__text">Real talk around real flame. What you say here stays at the fire.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== FILM ===== -->
+    <section class="iz-film">
+      <video class="iz-film__video" autoplay muted loop playsinline
+             aria-label="Iron & Zen retreat film"
+             src="https://framerusercontent.com/assets/wwLLxlHH8dBBz0VxRBEEK8yRuY.mp4"></video>
+      <div class="iz-film__scrim" aria-hidden="true"></div>
+      <div class="iz-film__inner">
+        <p class="iz-eyebrow iz-eyebrow--photo">A transformative space</p>
+        <h2 class="iz-display iz-h2 iz-film__inner">Designed for growth — where time, effort, and focus come together.</h2>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <div class="iz-gallery">
+      <div role="img" aria-label="Retreat moment" style="background-image:url('https://framerusercontent.com/images/oeQfjSAOhyMMYWGcMOtNwNObQ2Y.jpg')"></div>
+      <div role="img" aria-label="Retreat moment" style="background-image:url('https://framerusercontent.com/images/ii0ZyAbDmQvFtCaA5GaaOXaC2XA.jpg')"></div>
+      <div role="img" aria-label="Retreat moment" style="background-image:url('https://framerusercontent.com/images/jmLWBe7wPd5a5DfFe5r8jTKKYY8.jpg')"></div>
+      <div role="img" aria-label="Retreat moment" style="background-image:url('https://framerusercontent.com/images/RSz4ifkoYhh1GHTfj6h7Fs8LQZk.jpg')"></div>
+    </div>
+
+    <!-- ===== HIDEOUT ===== -->
+    <section class="iz-sec iz-sec--soft">
+      <p class="iz-eyebrow">Activities that make us grow</p>
+      <h2 class="iz-display iz-h2">Flow &amp; Focus</h2>
+      <ul class="iz-list">
+        <li><span class="m">✦</span> Workout to strengthen</li>
+        <li><span class="m">✦</span> Stunning landscape</li>
+        <li><span class="m">✦</span> Community to feel alive</li>
+        <li><span class="m">✦</span> Local &amp; healthy food provided</li>
+        <li><span class="m">✦</span> Morning routine to get us started</li>
+      </ul>
+      <article class="iz-card" data-parallax style="min-height:380px;margin-top:26px">
+        <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/SrWr8E8MYlLFifHPYRyuQ7dgv4o.jpg')"></div>
+        <div class="iz-card__scrim" aria-hidden="true"></div>
+        <div class="iz-card__body">
+          <p class="iz-card__eyebrow">In motion</p>
+          <h3 class="iz-card__title">Move, then be still</h3>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===== BROTHERHOOD ===== -->
+    <section class="iz-sec">
+      <p class="iz-eyebrow">Become part of it</p>
+      <h2 class="iz-display iz-h2">A co-created space — brotherhood, growth, shared wisdom</h2>
+      <div class="iz-stack iz-stack--cards">
+        <article class="iz-card" data-parallax style="min-height:340px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/9ZHa291xo3XdWyq9MPiWoN2cBMA.jpg?width=500&height=301')"></div>
+          <div class="iz-card__scrim" aria-hidden="true"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">Play</p>
+            <h3 class="iz-card__title">Ultimate Frisbee</h3>
+            <p class="iz-card__text">Kostja shows us Ultimate Frisbee and disc golf — every throw brings the game to life.</p>
+          </div>
+        </article>
+        <article class="iz-card" data-parallax style="min-height:340px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/UFDfHGivqmjf23PN8OVCOYlDak.jpg?width=500&height=281')"></div>
+          <div class="iz-card__scrim" aria-hidden="true"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">Strength</p>
+            <h3 class="iz-card__title">Calisthenics</h3>
+            <p class="iz-card__text">Henrique leads calisthenics — master control and movement using nothing but your own body.</p>
+          </div>
+        </article>
+        <article class="iz-card" data-parallax style="min-height:340px">
+          <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/FQPQ0jSsLBjYoKWZmBHfoznlVLk.jpg?width=400&height=533')"></div>
+          <div class="iz-card__scrim" aria-hidden="true"></div>
+          <div class="iz-card__body">
+            <p class="iz-card__eyebrow">Mind</p>
+            <h3 class="iz-card__title">Value Investing</h3>
+            <p class="iz-card__text">Peter shows us how to invest our money smart and retire early, following the advice of the greats.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== FACILITATOR ===== -->
+    <section class="iz-sec iz-sec--soft">
+      <article class="iz-card" data-parallax style="min-height:440px">
+        <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/XeiSNJ14ZqkdNVrNuFi2pV3LYA.jpg?width=500&height=629')"></div>
+        <div class="iz-card__scrim" aria-hidden="true"></div>
+        <div class="iz-card__body">
+          <p class="iz-card__eyebrow">Meet your facilitator</p>
+          <h3 class="iz-card__title" style="font-size:30px">Edgar</h3>
+        </div>
+      </article>
+      <h2 class="iz-display iz-h2" style="margin-top:28px">A decade of coliving, movement, and meditation</h2>
+      <div class="iz-prose">
+        <p>I've spent the last decade exploring the world and co-creating coliving spaces — building communities where men connect, grow, and create shared realities to transform themselves and the world.</p>
+        <p>I envision spaces where men remember their essence, rebuild themselves, and together shape a society in sync with nature and universal harmony.</p>
+        <p>On this journey I'll share the yoga, movement, and meditation practices I've gathered through my travels and teacher training. Everything that shaped me — now shared with you.</p>
+      </div>
+      <div class="iz-byline">— Edgar</div>
+    </section>
+
+    <!-- ===== TESTIMONIAL (on dark photo) ===== -->
+    <section class="iz-quote" data-parallax>
+      <div class="iz-px" style="background-image:url('https://framerusercontent.com/images/Nn3ok2bkB43TtLiGu7xwxHFnUc.jpg')"></div>
+      <div class="iz-quote__scrim" aria-hidden="true"></div>
+      <div class="iz-quote__inner">
+        <blockquote>"Great shared experiences to get back to the mission — learned many new things and met amazing people. Really inspirational."</blockquote>
+        <div class="iz-quote__cite">Julian &amp; Konstantin · Past cohorts</div>
+        <div class="iz-quote__stats">
+          <div class="iz-stat"><span class="iz-stat__f">5/5</span><span class="iz-stat__l">Average rating</span></div>
+          <div class="iz-stat"><span class="iz-stat__f">120+</span><span class="iz-stat__l">Men hosted</span></div>
+          <div class="iz-stat"><span class="iz-stat__f">April</span><span class="iz-stat__l">Next cohort</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPLY ===== -->
+    <section class="iz-sec iz-sec--soft" id="apply">
+      <p class="iz-eyebrow iz-eyebrow--accent">Opening spots · April</p>
+      <h2 class="iz-display iz-h2">Apply to join</h2>
+
+      <div id="apply-form-wrap">
+        <form class="iz-form" id="apply-form">
+          <div class="iz-field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" placeholder="First & last" required />
+          </div>
+          <div class="iz-field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" placeholder="you@email.com" required />
+          </div>
+          <button class="iz-btn iz-btn--primary" type="submit">Send Application</button>
+          <span class="iz-form__note">We won't send any fluff. Your email stays with us. Promise.</span>
+        </form>
+      </div>
+      <p class="iz-done" id="apply-done" hidden><span class="d">✦</span> Received. We read every application by hand — expect a note within a few days.</p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="iz-footer">
+      <p class="iz-footer__statement">We live in a world that pulls us away — it's time to build a space for men to ground themselves in strength and stillness.</p>
+      <div class="iz-footer__bar">
+        <span class="iz-lockup iz-lockup--sm">Iron <span class="d">✦</span> Zen</span>
+        <div class="iz-footer__meta">
+          <a href="mailto:connect@ironandzen.com">connect@ironandzen.com</a>
+          <span>© 2025 Iron &amp; Zen</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Ambient sound toggle (fixed) -->
+  <button id="iz-sound-btn" class="iz-sound" aria-pressed="false" title="Ambient sound">
+    <span id="iz-sound-off" style="font-size:15px;line-height:1;opacity:.85;">♪̸</span>
+    <span id="iz-sound-on"  style="font-size:17px;line-height:1;" hidden>♪</span>
+  </button>
+
+  <script>
+    // ── State ────────────────────────────────────────────────
+    let soundOn = false;
+    let _ac: AudioContext | null = null;
+    let _bedGain: GainNode | null = null;
+    let _src: AudioBufferSourceNode | null = null;
+    let _crackle: ReturnType<typeof setInterval> | null = null;
+    let _raf: number | null = null;
+
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+    let _mx = 0.5, _my = 0.45;
+    let _w = 0, _h = 0;
+    let ctx2d: CanvasRenderingContext2D | null = null;
+    let embers: Ember[] = [];
+
+    type Ember = { x:number; y:number; r:number; vy:number; drift:number; ph:number; a:number; hue:number; };
+
+    // ── DOM refs ─────────────────────────────────────────────
+    const canvas      = document.getElementById('iz-embers') as HTMLCanvasElement;
+    const hero        = document.getElementById('iz-hero') as HTMLElement;
+    const heroPhoto   = document.getElementById('iz-hero-photo') as HTMLElement;
+    const heroLight   = document.getElementById('iz-hero-light') as HTMLElement;
+    const atmos       = document.getElementById('iz-atmos') as HTMLElement;
+    const vig         = document.getElementById('iz-vig') as HTMLElement;
+    const scrollhint  = document.getElementById('iz-scrollhint') as HTMLElement;
+    const parallaxEls = Array.from(document.querySelectorAll<HTMLElement>('[data-parallax]'));
+
+    // ── Smooth scroll & form ─────────────────────────────────
+    document.querySelectorAll<HTMLAnchorElement>('a[href="#apply"]').forEach(el => {
+      el.addEventListener('click', e => {
+        const target = document.getElementById('apply');
+        if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop, behavior: 'smooth' }); }
+      });
+    });
+
+    document.getElementById('apply-form')?.addEventListener('submit', e => {
+      e.preventDefault();
+      (document.getElementById('apply-form-wrap') as HTMLElement).style.display = 'none';
+      (document.getElementById('apply-done') as HTMLElement).hidden = false;
+    });
+
+    // ── Embers ───────────────────────────────────────────────
+    function mkEmber(seed: boolean): Ember {
+      return {
+        x: Math.random() * _w,
+        y: seed ? Math.random() * _h : _h + 8,
+        r: 0.6 + Math.random() * 1.9,
+        vy: 0.18 + Math.random() * 0.55,
+        drift: (Math.random() - 0.5) * 0.5,
+        ph: Math.random() * Math.PI * 2,
+        a: 0.25 + Math.random() * 0.5,
+        hue: 28 + Math.random() * 18,
+      };
+    }
+
+    function resizeCanvas() {
+      if (!canvas || !hero) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      _w = hero.clientWidth; _h = hero.clientHeight;
+      canvas.width  = _w * dpr;
+      canvas.height = _h * dpr;
+      ctx2d = canvas.getContext('2d');
+      ctx2d?.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const n = Math.max(34, Math.min(70, Math.round(_w / 7)));
+      embers = Array.from({ length: n }, () => mkEmber(true));
+    }
+
+    function emberLoop() {
+      if (ctx2d) {
+        ctx2d.clearRect(0, 0, _w, _h);
+        ctx2d.globalCompositeOperation = 'lighter';
+        const t = performance.now() * 0.001;
+        for (const e of embers) {
+          e.y -= e.vy;
+          e.x += e.drift + Math.sin(t + e.ph) * 0.25;
+          if (e.y < -10) Object.assign(e, mkEmber(false));
+          const tw = 0.6 + 0.4 * Math.sin(t * 2 + e.ph);
+          ctx2d.beginPath();
+          const g = ctx2d.createRadialGradient(e.x, e.y, 0, e.x, e.y, e.r * 4);
+          g.addColorStop(0, `hsla(${e.hue},90%,68%,${(e.a * tw).toFixed(3)})`);
+          g.addColorStop(1, 'hsla(30,90%,60%,0)');
+          ctx2d.fillStyle = g;
+          ctx2d.arc(e.x, e.y, e.r * 4, 0, Math.PI * 2);
+          ctx2d.fill();
+        }
+        ctx2d.globalCompositeOperation = 'source-over';
+      }
+      _raf = requestAnimationFrame(emberLoop);
+    }
+
+    // ── Pointer tracking ─────────────────────────────────────
+    function onPointer(e: PointerEvent) {
+      if (!hero) return;
+      const r = hero.getBoundingClientRect();
+      const inside = e.clientY >= r.top && e.clientY <= r.bottom;
+      _mx += ((e.clientX - r.left) / r.width  - _mx) * 0.18;
+      _my += ((e.clientY - r.top)  / r.height - _my) * 0.18;
+      if (heroLight) {
+        heroLight.style.setProperty('--mx', (_mx * 100).toFixed(1) + '%');
+        heroLight.style.setProperty('--my', (_my * 100).toFixed(1) + '%');
+      }
+      if (heroPhoto && inside && !reduced) {
+        const dx = (_mx - 0.5) * -22;
+        const dy = (_my - 0.5) * -16;
+        heroPhoto.style.transform = `scale(1.08) translate(${dx.toFixed(1)}px,${dy.toFixed(1)}px)`;
+      }
+    }
+
+    // ── Scroll: color temperature + parallax ─────────────────
+    function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+    function mixColor(c1: number[], c2: number[], t: number) {
+      return c1.map((v, i) => Math.round(lerp(v, c2[i]!, t)));
+    }
+
+    function onScroll() {
+      const y = window.scrollY;
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const p = docH > 0 ? Math.min(1, Math.max(0, y / docH)) : 0;
+
+      // cold dawn-blue → golden → firelight
+      const dawn = [120,150,190], gold = [222,172,96], fire = [201,92,44];
+      const col = p < 0.5
+        ? mixColor(dawn, gold, p / 0.5)
+        : mixColor(gold, fire, (p - 0.5) / 0.5);
+      if (atmos) {
+        atmos.style.background = `rgb(${col!.join(',')})`;
+        atmos.style.opacity = (0.12 + p * 0.34).toFixed(3);
+      }
+      if (vig) {
+        const vg = (p * 0.42).toFixed(3);
+        vig.style.background = `radial-gradient(130% 100% at 50% 46%, transparent 52%, rgba(20,12,4,${vg}) 100%)`;
+      }
+
+      // hero photo scroll parallax
+      if (heroPhoto && !reduced) {
+        heroPhoto.style.transform = `scale(1.08) translateY(${(y * 0.18).toFixed(1)}px)`;
+      }
+      if (scrollhint) scrollhint.style.opacity = Math.max(0, 1 - y / 260).toFixed(2);
+
+      // depth parallax on photo cards & quote
+      if (!reduced) {
+        const vh = window.innerHeight;
+        for (const el of parallaxEls) {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -80 || r.top > vh + 80) continue;
+          const off = ((r.top + r.height / 2 - vh / 2) / vh) * -38;
+          const px = el.querySelector<HTMLElement>('.iz-px');
+          if (px) px.style.transform = `translateY(${off.toFixed(1)}px) scale(1.12)`;
+        }
+      }
+    }
+
+    // ── Ambient sound ─────────────────────────────────────────
+    function startSound() {
+      try {
+        const AC = (window as any).AudioContext || (window as any).webkitAudioContext;
+        if (!AC) return;
+        _ac = new AC() as AudioContext;
+        const len = _ac.sampleRate * 2;
+        const buf = _ac.createBuffer(1, len, _ac.sampleRate);
+        const d = buf.getChannelData(0);
+        let last = 0;
+        for (let i = 0; i < len; i++) {
+          const w = Math.random() * 2 - 1;
+          last = (last + 0.02 * w) / 1.02;
+          d[i] = last * 3.2;
+        }
+        _src = _ac.createBufferSource();
+        _src.buffer = buf; _src.loop = true;
+        const lp = _ac.createBiquadFilter();
+        lp.type = 'lowpass'; lp.frequency.value = 480;
+        _bedGain = _ac.createGain();
+        _bedGain.gain.value = 0;
+        _src.connect(lp).connect(_bedGain).connect(_ac.destination);
+        _src.start();
+        _bedGain.gain.linearRampToValueAtTime(0.16, _ac.currentTime + 1.4);
+        _crackle = setInterval(() => {
+          if (!_ac) return;
+          const now = _ac.currentTime;
+          const o = _ac.createOscillator();
+          const g = _ac.createGain();
+          o.type = 'triangle';
+          o.frequency.value = 600 + Math.random() * 1400;
+          g.gain.setValueAtTime(0.0001, now);
+          g.gain.exponentialRampToValueAtTime(0.04 + Math.random() * 0.05, now + 0.005);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + 0.07 + Math.random() * 0.08);
+          o.connect(g).connect(_ac!.destination);
+          o.start(now); o.stop(now + 0.2);
+        }, 320);
+      } catch {}
+    }
+
+    function stopSound() {
+      if (_crackle) { clearInterval(_crackle); _crackle = null; }
+      if (_ac) {
+        try {
+          _bedGain?.gain.linearRampToValueAtTime(0, _ac.currentTime + 0.4);
+          const ac = _ac; _ac = null;
+          setTimeout(() => { try { ac.close(); } catch {} }, 500);
+        } catch {}
+      }
+    }
+
+    document.getElementById('iz-sound-btn')?.addEventListener('click', () => {
+      soundOn = !soundOn;
+      if (soundOn) startSound(); else stopSound();
+      const btn = document.getElementById('iz-sound-btn')!;
+      btn.setAttribute('aria-pressed', String(soundOn));
+      (document.getElementById('iz-sound-on')  as HTMLElement).hidden = !soundOn;
+      (document.getElementById('iz-sound-off') as HTMLElement).hidden =  soundOn;
+    });
+
+    // ── Init ──────────────────────────────────────────────────
+    resizeCanvas();
+    onScroll();
+    if (!reduced) emberLoop();
+
+    window.addEventListener('scroll',      onScroll,   { passive: true });
+    window.addEventListener('resize',      resizeCanvas, { passive: true });
+    window.addEventListener('pointermove', onPointer,  { passive: true });
+  </script>
+</Layout>
