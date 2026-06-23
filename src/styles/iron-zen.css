@@ -66,7 +66,7 @@ a { color: inherit; }
   background: var(--bg-deep);
   overflow: hidden;
 }
-@media (min-width: 540px) {
+@media (min-width: 540px) and (max-width: 767px) {
   body { padding: 32px 0; }
   .iz-app { box-shadow: 0 30px 80px rgba(0,0,0,.55); border-radius: 6px; }
 }
@@ -435,11 +435,11 @@ a { color: inherit; }
 
 
 /* ============================================================
-   LANDSCAPE & DESKTOP BREAKPOINTS
+   RESPONSIVE BREAKPOINTS
    ============================================================ */
 
-/* --- (A) Short-landscape phones ≤ 500px height --- */
-@media (orientation: landscape) and (max-height: 500px) {
+/* --- Short-landscape phones (portrait-width ≤ 767px, height ≤ 500px) --- */
+@media (orientation: landscape) and (max-height: 500px) and (max-width: 767px) {
   body { padding: 0; }
   .iz-app { max-width: 100%; border-radius: 0; box-shadow: none; }
   .iz-hero { min-height: 100svh; padding: 16px 32px 32px; flex-direction: row; justify-content: flex-start; align-items: flex-end; text-align: left; }
@@ -449,7 +449,7 @@ a { color: inherit; }
   .iz-hero__lead { font-size: 15px; margin: 12px 0 0; max-width: none; }
   .iz-hero__cta { flex-direction: row; margin-top: 18px; gap: 10px; }
   .iz-hero__meta { left: 32px; right: 32px; }
-  .iz-sec { padding: 32px 32px; }
+  .iz-sec { padding: 32px; }
   .iz-sec--tight { padding-top: 6px; }
   .iz-h2 { font-size: 26px; }
   .iz-intro { font-size: 23px; }
@@ -475,30 +475,91 @@ a { color: inherit; }
   .iz-footer__meta { flex-direction: row; gap: 20px; }
 }
 
-/* --- (B) Wider landscape / small tablet ≥ 700px --- */
-@media (min-width: 700px) and (orientation: landscape) {
-  .iz-app { max-width: 680px; }
-  .iz-hero__inner { max-width: 460px; }
-  .iz-hero__title { font-size: 44px; }
-  .iz-stack--cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .iz-stack--cards > .iz-card { min-height: 260px !important; }
+/* --- Tablet and up (768px+) — full-width website layout --- */
+@media (min-width: 768px) {
+  body { padding: 0; }
+  .iz-app { max-width: 100%; border-radius: 0; box-shadow: none; }
+
+  .iz-nav { padding: 28px 40px 0; }
+
+  .iz-hero { min-height: 82vh; }
+  .iz-hero__inner { max-width: 540px; }
+  .iz-hero__title { font-size: 68px; }
+  .iz-hero__lead { font-size: 19px; max-width: 400px; }
+  .iz-hero__cta { flex-direction: row; }
+  .iz-hero__meta { left: 40px; right: 40px; }
+
+  .iz-sec { padding: 80px 40px; }
+  .iz-sec--tight { padding-top: 8px; }
+  .iz-h2 { font-size: 38px; }
+  .iz-intro { font-size: 32px; max-width: 680px; }
+  .iz-sec--center .iz-intro { margin-left: auto; margin-right: auto; }
+
+  .iz-stack--cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .iz-stack--cards > .iz-card { min-height: 340px !important; }
+
+  .iz-film { min-height: 520px; padding: 80px 40px; }
+  .iz-film__inner { max-width: 520px; }
+
   .iz-gallery { grid-template-columns: repeat(4, 1fr); }
-  .iz-gallery > div { min-height: 160px; }
+  .iz-gallery > div { min-height: 220px; }
+
+  .iz-quote { min-height: 540px; padding: 80px 40px; }
+  .iz-quote blockquote { font-size: 34px; }
+  .iz-quote__inner { max-width: 620px; }
+  .iz-quote__stats { gap: 40px; }
+
+  .iz-footer { padding: 80px 40px; }
+  .iz-footer__statement { font-size: 26px; max-width: 620px; }
   .iz-footer__bar { flex-direction: row; align-items: center; justify-content: space-between; }
   .iz-footer__meta { flex-direction: row; gap: 24px; }
 }
 
-/* --- (C) Desktop ≥ 1024px --- */
-@media (min-width: 1024px) {
-  body { padding: 40px 0; }
-  .iz-app { max-width: 600px; box-shadow: 0 40px 100px rgba(0,0,0,.6); border-radius: 8px; }
-  .iz-hero { min-height: 680px; }
-  .iz-hero__inner { max-width: 400px; }
-  .iz-hero__title { font-size: 62px; }
-  .iz-hero__lead { font-size: 18px; }
-  .iz-h2 { font-size: 34px; }
-  .iz-intro { font-size: 30px; }
-  .iz-footer__bar { flex-direction: row; align-items: center; justify-content: space-between; }
-  .iz-footer__meta { flex-direction: row; gap: 28px; }
-  .iz-gallery > div { min-height: 220px; }
+/* --- Desktop (1100px+) --- */
+@media (min-width: 1100px) {
+  .iz-nav { padding: 32px 60px 0; }
+
+  .iz-hero { min-height: 100vh; }
+  .iz-hero__inner { max-width: 660px; }
+  .iz-hero__title { font-size: 88px; }
+  .iz-hero__lead { font-size: 20px; max-width: 480px; }
+  .iz-hero__meta { left: 60px; right: 60px; }
+
+  /* Content max-width ~1040px, centered via padding */
+  .iz-sec { padding: 100px clamp(60px, calc(50% - 520px), 180px); }
+  .iz-sec--tight { padding-top: 10px; }
+  .iz-h2 { font-size: 46px; }
+  .iz-intro { font-size: 40px; max-width: 820px; }
+
+  /* Pillars (Iron / Zen / Brotherhood) go horizontal */
+  .iz-stack:not(.iz-stack--cards) { flex-direction: row; gap: 0; margin-top: 48px; }
+  .iz-info { flex: 1; border-top: none; border-left: 1px solid var(--line); padding-top: 0; padding-left: 36px; padding-right: 36px; }
+  .iz-info:first-child { border-left: none; padding-left: 0; }
+  .iz-info:last-child { padding-right: 0; }
+
+  /* Cards: 3 columns */
+  .iz-stack--cards { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .iz-stack--cards > .iz-card { min-height: 400px !important; }
+
+  .iz-film { min-height: 640px; padding: 100px 60px; }
+  .iz-film__inner { max-width: 580px; }
+
+  .iz-gallery > div { min-height: 300px; }
+
+  .iz-quote { min-height: 600px; padding: 120px clamp(60px, calc(50% - 440px), 180px); }
+  .iz-quote blockquote { font-size: 44px; }
+  .iz-quote__inner { max-width: 800px; }
+  .iz-quote__stats { gap: 50px; margin-top: 44px; }
+  .iz-stat__f { font-size: 42px; }
+
+  .iz-footer { padding: 100px clamp(60px, calc(50% - 520px), 180px); }
+  .iz-footer__statement { font-size: 30px; max-width: 720px; }
+}
+
+/* --- Large desktop (1440px+) --- */
+@media (min-width: 1440px) {
+  .iz-hero__title { font-size: 96px; }
+  .iz-h2 { font-size: 52px; }
+  .iz-intro { font-size: 44px; }
+  .iz-gallery > div { min-height: 360px; }
 }
