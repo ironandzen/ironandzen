@@ -211,7 +211,7 @@ a { color: inherit; }
 }
 .iz-hero__photo {
   position: absolute; inset: -10%;
-  background-image: url('https://framerusercontent.com/images/p2TRMQ7hgJJbrEOsy4HrpWPhBk.jpg?width=1920&height=1280');
+  background-image: url('/images/hero-bg.jpg');
   background-size: cover; background-position: center;
   filter: var(--img); will-change: transform;
   transform: scale(1.08);
