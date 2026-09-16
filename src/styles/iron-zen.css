@@ -328,6 +328,46 @@ a { color: inherit; }
 }
 .iz-list .m { color: var(--sand); font-size: 13px; }
 
+/* ---- Accordion (Flow & Focus) ---- */
+.iz-acc { margin: 24px 0 0; }
+.iz-acc__item { border-top: 1px solid var(--line); }
+.iz-acc__item:last-child { border-bottom: 1px solid var(--line); }
+.iz-acc__head {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 14px 0; font-size: 16px; color: var(--paper);
+  cursor: pointer; list-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.iz-acc__head::-webkit-details-marker { display: none; }
+.iz-acc__head:focus-visible { outline: 2px solid var(--sand); outline-offset: 3px; }
+.iz-acc__label { flex: 1; }
+.iz-acc__chev {
+  width: 17px; height: 17px; flex: none; align-self: center;
+  color: var(--sand); opacity: .75;
+  transition: transform .32s cubic-bezier(.4,0,.2,1), opacity .32s;
+}
+.iz-acc__item[open] .iz-acc__chev { transform: rotate(90deg); opacity: 1; }
+.iz-acc__body {
+  padding: 0 29px 18px;
+  color: var(--muted); font-size: 15px; line-height: 1.65;
+}
+.iz-acc__body p { margin: 0; max-width: 64ch; }
+
+/* Smooth open/close where the browser supports animating to auto height;
+   elsewhere it simply snaps open, which is fine. */
+@supports (interpolate-size: allow-keywords) {
+  :root { interpolate-size: allow-keywords; }
+  .iz-acc__item::details-content {
+    block-size: 0; overflow: hidden;
+    transition: block-size .34s cubic-bezier(.4,0,.2,1), content-visibility .34s allow-discrete;
+  }
+  .iz-acc__item[open]::details-content { block-size: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .iz-acc__chev { transition: none; }
+  .iz-acc__item::details-content { transition: none; }
+}
+
 /* ---- Facilitator prose ---- */
 .iz-prose {
   display: flex; flex-direction: column; gap: 14px;
