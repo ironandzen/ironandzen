@@ -12,7 +12,8 @@ All media files served from `/public/images/`.
 | `images/card-activity-frisbee.jpg` | Image | `index.astro` | Brotherhood — "Ultimate Frisbee" activity card (Kostja) |
 | `images/card-activity-calisthenics.jpg` | Image | `index.astro` | Brotherhood — "Calisthenics" activity card (Henrique) |
 | `images/card-activity-investing.jpg` | Image | `index.astro` | Brotherhood — "Value Investing" activity card (Peter) |
-| `images/facilitator-edgar.jpg` | Image | `index.astro` | Facilitator section — Edgar's portrait card |
+| `images/facilitator-henrique.jpg` | Image | `index.astro` | Facilitator section — Henrique Saraiva's portrait card (Ironman finish line) |
+| `images/facilitator-edgar.jpg` | Image | _unused_ | Former facilitator portrait (Edgar) — kept for reference |
 | `images/testimonial-bg.jpg` | Image | `index.astro` | Testimonial — dark background photo behind the quote block |
 | `images/gallery-retreat-1.jpg` | Image | `index.astro` | Gallery strip — first image (2×2 grid, slot 1) |
 | `images/gallery-retreat-2.jpg` | Image | `index.astro` | Gallery strip — second image (2×2 grid, slot 2) |
