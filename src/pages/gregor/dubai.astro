@@ -1,0 +1,527 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/gregor-dubai.css';
+---
+<Layout
+  title="Gerd Kschmand — Dubai Era | Der ultimative Chad"
+  description="Satire: Gerd Kschmand ist nach Dubai ausgewandert. 04:15 Uhr aufstehen, Marina-Balkon, Bühne, Headset. Eine Parodie auf die deutsche Dubai-Seminarkultur."
+>
+  <div class="dxb-page">
+
+    <!-- ===== NAV ===== -->
+    <nav class="dxb-nav" id="dxb-nav">
+      <div class="dxb-nav__inner">
+        <a class="dxb-brand" href="#top">
+          <span class="dxb-brand__mark">GK</span>
+          <span>
+            Gerd Kschmand
+            <span class="dxb-brand__sub">Dubai Era</span>
+          </span>
+        </a>
+        <div class="dxb-nav__links">
+          <a href="#tag" data-i18n="nav.day">Der Tag</a>
+          <a href="#seminare" data-i18n="nav.seminars">Seminare</a>
+          <a href="#kodex" data-i18n="nav.code">Der Kodex</a>
+          <a href="#stimmen" data-i18n="nav.voices">Stimmen</a>
+        </div>
+        <div class="dxb-nav__cta">
+          <div class="dxb-lang" id="dxb-lang" role="group" aria-label="Sprache / Language">
+            <button type="button" data-lang="de" class="is-active" aria-pressed="true">DE</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="dxb-btn dxb-btn--gold dxb-btn--sm dxb-nav__book" href="#bewerben" data-i18n="nav.cta">Platz sichern</a>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+
+      <!-- ===== HERO ===== -->
+      <header class="dxb-hero">
+        <!-- Layer 1: built-in skyline art (always renders) -->
+        <div class="dxb-hero__bg" aria-hidden="true">
+          <svg class="dxb-skyline" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dxbFar" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#46698e" stop-opacity=".62" />
+                <stop offset="100%" stop-color="#0d1c2c" stop-opacity=".62" />
+              </linearGradient>
+              <linearGradient id="dxbNear" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#2d4c6d" />
+                <stop offset="100%" stop-color="#0a121c" />
+              </linearGradient>
+              <linearGradient id="dxbSpire" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e5be6a" />
+                <stop offset="30%" stop-color="#6f7f95" />
+                <stop offset="100%" stop-color="#0b1622" />
+              </linearGradient>
+              <radialGradient id="dxbGlow" cx="50%" cy="100%" r="62%">
+                <stop offset="0%" stop-color="#c4993f" stop-opacity=".45" />
+                <stop offset="100%" stop-color="#c4993f" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+
+            <rect x="0" y="110" width="1200" height="330" fill="url(#dxbGlow)" />
+
+            <g fill="url(#dxbFar)">
+              <rect x="40" y="300" width="70" height="140" />
+              <rect x="126" y="252" width="52" height="188" />
+              <rect x="196" y="330" width="40" height="110" />
+              <rect x="250" y="214" width="62" height="226" />
+              <rect x="700" y="236" width="60" height="204" />
+              <rect x="776" y="292" width="44" height="148" />
+              <rect x="838" y="204" width="56" height="236" />
+              <rect x="1100" y="216" width="62" height="224" />
+            </g>
+
+            <g fill="url(#dxbNear)">
+              <rect x="0" y="352" width="58" height="88" />
+              <rect x="86" y="326" width="46" height="114" />
+              <rect x="316" y="288" width="48" height="152" />
+              <rect x="372" y="340" width="38" height="100" />
+              <rect x="418" y="262" width="56" height="178" />
+              <rect x="482" y="318" width="42" height="122" />
+              <rect x="532" y="286" width="34" height="154" />
+              <rect x="646" y="272" width="40" height="168" />
+              <rect x="904" y="310" width="42" height="130" />
+              <rect x="954" y="248" width="66" height="192" />
+              <rect x="1030" y="296" width="48" height="144" />
+              <rect x="1160" y="330" width="40" height="110" />
+            </g>
+
+            <polygon fill="url(#dxbSpire)" points="594,46 600,10 606,46 612,132 622,224 636,318 652,440 548,440 564,318 578,224 588,132" />
+            <rect x="598" y="0" width="4" height="22" fill="#e5be6a" opacity=".9" />
+            <g fill="#e5be6a" opacity=".5">
+              <rect x="586" y="250" width="3" height="7" /><rect x="600" y="272" width="3" height="7" />
+              <rect x="612" y="238" width="3" height="7" /><rect x="592" y="320" width="3" height="7" />
+              <rect x="618" y="344" width="3" height="7" /><rect x="576" y="368" width="3" height="7" />
+              <rect x="634" y="300" width="3" height="7" /><rect x="604" y="394" width="3" height="7" />
+              <rect x="266" y="252" width="3" height="7" /><rect x="292" y="288" width="3" height="7" />
+              <rect x="436" y="300" width="3" height="7" /><rect x="456" y="342" width="3" height="7" />
+              <rect x="722" y="270" width="3" height="7" /><rect x="744" y="318" width="3" height="7" />
+              <rect x="856" y="240" width="3" height="7" /><rect x="874" y="286" width="3" height="7" />
+              <rect x="974" y="282" width="3" height="7" /><rect x="998" y="330" width="3" height="7" />
+            </g>
+          </svg>
+        </div>
+        <!-- Layer 2: optional photo, covers the art once the file exists -->
+        <div class="dxb-hero__photo" aria-hidden="true"></div>
+        <div class="dxb-hero__scrim" aria-hidden="true"></div>
+
+        <div class="dxb-wrap dxb-hero__inner">
+          <div class="dxb-reveal">
+            <span class="dxb-hero__tag" data-i18n="hero.tag"><i></i> Dubai Marina · 26 °C · Kein Zurück</span>
+            <h1 class="dxb-h1" data-i18n="hero.title">Der ultimative<br /><em>Chad</em></h1>
+            <p class="dxb-lead" data-i18n="hero.lead">Gerd Kschmand hat die Buchhaltung nie aufgegeben. Er hat sie nur auf 04:15 Uhr vorverlegt, in eine Zeitzone mit besserem Wetter und flacherer Steuerkurve. Willkommen in der Dubai-Phase.</p>
+            <div class="dxb-hero__cta">
+              <a class="dxb-btn dxb-btn--gold" href="#seminare" data-i18n="hero.cta1">Seminare ansehen</a>
+              <a class="dxb-btn dxb-btn--ghost" href="/gregor" data-i18n="hero.cta2">Zur seriösen Version</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ===== STAT STRIP ===== -->
+      <section class="dxb-stats" aria-label="Kennzahlen">
+        <div class="dxb-stat"><span class="dxb-stat__f">04:15</span><span class="dxb-stat__l" data-i18n="stat.wake">Aufstehzeit</span></div>
+        <div class="dxb-stat"><span class="dxb-stat__f">0</span><span class="dxb-stat__l" data-i18n="stat.excuses">Ausreden</span></div>
+        <div class="dxb-stat"><span class="dxb-stat__f">365</span><span class="dxb-stat__l" data-i18n="stat.sun">Tage Sonne</span></div>
+        <div class="dxb-stat"><span class="dxb-stat__f">12</span><span class="dxb-stat__l" data-i18n="stat.seminars">Seminare / Jahr</span></div>
+      </section>
+
+      <!-- ===== INTRO SPLIT ===== -->
+      <section class="dxb-section">
+        <div class="dxb-wrap dxb-split">
+          <div class="dxb-split__text dxb-reveal">
+            <p class="dxb-eyebrow" data-i18n="move.eyebrow">Die Auswanderung</p>
+            <h2 class="dxb-h2" data-i18n="move.title">Von der Bilanz zur Bühne</h2>
+            <p class="dxb-body" data-i18n="move.p1">Irgendwann reichte das Bilanzrichtliniengesetz nicht mehr als Persönlichkeit. Gerd verkaufte den Kombi, behielt den Taschenrechner und buchte ein One-Way-Ticket — Handgepäck, weil ein Chad nicht auf Koffer wartet.</p>
+            <p class="dxb-body" style="margin-top:16px;" data-i18n="move.p2">Heute erklärt er Umsatzsteuervoranmeldungen im 34. Stock, mit Blick auf eine Skyline, die genauso gebaut wurde wie sein Oberkörper: schnell, teuer und gegen jeden Rat.</p>
+          </div>
+          <div class="dxb-split__media dxb-shot dxb-shot--marina dxb-reveal" role="img" aria-label="Dubai Marina bei Nacht"></div>
+        </div>
+      </section>
+
+      <!-- ===== DER TAG ===== -->
+      <section class="dxb-section dxb-section--tight" id="tag">
+        <div class="dxb-wrap">
+          <div class="dxb-section__head dxb-reveal">
+            <p class="dxb-eyebrow" data-i18n="day.eyebrow">Der Tag</p>
+            <h2 class="dxb-h2" data-i18n="day.title">24 Stunden, davon 19 produktiv</h2>
+            <p class="dxb-lead" data-i18n="day.lead">Kein Tag ist gleich. Außer der Struktur. Und dem Frühstück. Und dem Training. Und der Uhrzeit.</p>
+          </div>
+
+          <div class="dxb-day">
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">04:15</span>
+              <h3 class="dxb-day__title" data-i18n="d1.t">Aufstehen ohne Wecker</h3>
+              <p class="dxb-day__body" data-i18n="d1.b">Der Wecker steht trotzdem daneben. Aus Respekt. Er wird nie gebraucht, aber er weiß, wer hier der Chef ist.</p>
+            </article>
+
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">04:30</span>
+              <h3 class="dxb-day__title" data-i18n="d2.t">Eisbad</h3>
+              <p class="dxb-day__body" data-i18n="d2.b">In Dubai muss das Eis eingeflogen werden. Gerd zahlt das. Nicht weil es sinnvoll ist, sondern weil es unbequem ist.</p>
+            </article>
+
+            <article class="dxb-day__item dxb-day__item--wide dxb-reveal">
+              <div class="dxb-day__shot dxb-shot dxb-shot--gym" role="img" aria-label="Training im Fitnessstudio"></div>
+              <div class="dxb-day__copy">
+                <span class="dxb-day__time">05:00 — 07:00</span>
+                <h3 class="dxb-day__title" data-i18n="d3.t">Push Day</h3>
+                <p class="dxb-day__body" data-i18n="d3.b">Es ist immer Push Day. Pull Day ist eine Erfindung von Menschen, die sich mit weniger zufriedengeben. Zwischen den Sätzen beantwortet er Sprachnachrichten in einer Lautstärke, die das ganze Studio mitcoacht.</p>
+              </div>
+            </article>
+
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">07:30</span>
+              <h3 class="dxb-day__title" data-i18n="d4.t">Cashflow am Balkon</h3>
+              <p class="dxb-day__body" data-i18n="d4.b">Schwarzer Kaffee, schwarze Zahlen. Die Aussicht kostet mehr als sein erstes Auto, aber sie rechnet sich — sagt er, während er es ausrechnet.</p>
+            </article>
+
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">12:00</span>
+              <h3 class="dxb-day__title" data-i18n="d5.t">Mittagessen</h3>
+              <p class="dxb-day__body" data-i18n="d5.b">Steak. Als Beilage: ein zweites Steak. Kohlenhydrate sind für Menschen, die nichts vorhaben.</p>
+            </article>
+
+            <article class="dxb-day__item dxb-day__item--wide dxb-reveal">
+              <div class="dxb-day__shot dxb-shot dxb-shot--stage" role="img" aria-label="Seminarbühne mit Scheinwerfern"></div>
+              <div class="dxb-day__copy">
+                <span class="dxb-day__time">16:00</span>
+                <h3 class="dxb-day__title" data-i18n="d6.t">Bühne. Headset. 400 Stühle.</h3>
+                <p class="dxb-day__body" data-i18n="d6.b">Kein Skript, keine Folien, keine Pause. Nach 90 Minuten steht der halbe Saal. Nach 120 Minuten steht der halbe Saal am Verkaufstisch. So funktioniert das Genre.</p>
+              </div>
+            </article>
+
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">21:00</span>
+              <h3 class="dxb-day__title" data-i18n="d7.t">Journaling</h3>
+              <p class="dxb-day__body" data-i18n="d7.b">Drei Dinge, für die er dankbar ist. Alle drei sind Kennzahlen.</p>
+            </article>
+
+            <article class="dxb-day__item dxb-reveal">
+              <span class="dxb-day__time">21:30</span>
+              <h3 class="dxb-day__title" data-i18n="d8.t">Licht aus</h3>
+              <p class="dxb-day__body" data-i18n="d8.b">Sechs Stunden und 45 Minuten Schlaf. Optimiert, getrackt, dokumentiert. Geträumt wird auf Englisch, das klingt internationaler.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SEMINARE ===== -->
+      <section class="dxb-section" id="seminare">
+        <div class="dxb-wrap">
+          <div class="dxb-section__head dxb-section__head--center dxb-reveal">
+            <p class="dxb-eyebrow dxb-eyebrow--center" data-i18n="sem.eyebrow">Die Seminare</p>
+            <h2 class="dxb-h2" data-i18n="sem.title">Drei Tage, die deine Zahlen nicht verändern — aber dein Auftreten</h2>
+            <p class="dxb-lead" style="margin:0 auto;" data-i18n="sem.lead">Bühne, Headset, Wüste. Die volle Dramaturgie der deutschen Vertriebsbühne, exportiert in eine Zeitzone ohne Winter.</p>
+          </div>
+
+          <div class="dxb-seminars">
+            <article class="dxb-seminar dxb-reveal">
+              <div class="dxb-seminar__shot dxb-shot dxb-shot--stage" role="img" aria-label="Seminarbühne"></div>
+              <div class="dxb-seminar__body">
+                <p class="dxb-seminar__tag" data-i18n="s1.tag">Stufe 1</p>
+                <h3 class="dxb-h3" data-i18n="s1.t">Closer Kodex</h3>
+                <p class="dxb-body" data-i18n="s1.b">Der Abschluss ist kein Ereignis, sondern eine Charaktereigenschaft. Drei Tage darüber, warum „Ich überlege es mir" ein vollständiger Satz ist — nur nicht deiner.</p>
+                <div class="dxb-seminar__meta"><span data-i18n="s1.m1">3 Tage</span><span>Downtown Dubai</span><span data-i18n="s1.m3">400 Plätze</span></div>
+              </div>
+            </article>
+
+            <article class="dxb-seminar dxb-reveal">
+              <div class="dxb-seminar__shot dxb-shot dxb-shot--desert" role="img" aria-label="Wüste bei Dubai"></div>
+              <div class="dxb-seminar__body">
+                <p class="dxb-seminar__tag" data-i18n="s2.tag">Stufe 2</p>
+                <h3 class="dxb-h3" data-i18n="s2.t">Mindset Offensive</h3>
+                <p class="dxb-body" data-i18n="s2.b">Zwei Nächte in der Wüste, kein Empfang, kein Komfort. Am zweiten Morgen weint jemand. Am dritten kauft dieselbe Person Stufe 3.</p>
+                <div class="dxb-seminar__meta"><span data-i18n="s2.m1">2 Nächte</span><span>Al Marmoom</span><span data-i18n="s2.m3">60 Plätze</span></div>
+              </div>
+            </article>
+
+            <article class="dxb-seminar dxb-reveal">
+              <div class="dxb-seminar__shot dxb-shot dxb-shot--boardroom" role="img" aria-label="Besprechungsraum mit Skyline-Blick"></div>
+              <div class="dxb-seminar__body">
+                <p class="dxb-seminar__tag" data-i18n="s3.tag">Stufe 3</p>
+                <h3 class="dxb-h3">Cash &amp; Calisthenics</h3>
+                <p class="dxb-body" data-i18n="s3.b">Vormittags Bilanzanalyse, nachmittags Klimmzüge. Die einzige Fortbildung, bei der du sowohl deine Eigenkapitalquote als auch deinen Körperfettanteil unterschreibst.</p>
+                <div class="dxb-seminar__meta"><span data-i18n="s3.m1">5 Tage</span><span>Business Bay</span><span data-i18n="s3.m3">24 Plätze</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== KODEX ===== -->
+      <section class="dxb-section dxb-section--tight" id="kodex">
+        <div class="dxb-wrap">
+          <div class="dxb-section__head dxb-reveal">
+            <p class="dxb-eyebrow" data-i18n="code.eyebrow">Der Kodex</p>
+            <h2 class="dxb-h2" data-i18n="code.title">Sechs Regeln, null Verhandlung</h2>
+          </div>
+          <ul class="dxb-kodex dxb-reveal">
+            <li><span class="dxb-kodex__n">01</span><span class="dxb-kodex__t" data-i18n="k1.t">Kein Alkohol. Nur Ambition.</span><span class="dxb-kodex__b" data-i18n="k1.b">Ausnahmen gibt es nur auf Firmenfeiern, und die veranstaltet er nicht.</span></li>
+            <li><span class="dxb-kodex__n">02</span><span class="dxb-kodex__t" data-i18n="k2.t">Wer sich erklärt, verkauft nicht.</span><span class="dxb-kodex__b" data-i18n="k2.b">Der Preis wird genannt, nicht begründet. Danach schweigt man. Notfalls minutenlang.</span></li>
+            <li><span class="dxb-kodex__n">03</span><span class="dxb-kodex__t" data-i18n="k3.t">Der Körper ist die erste Bilanz.</span><span class="dxb-kodex__b" data-i18n="k3.b">Sie wird täglich geprüft, nie testiert und jedem ungefragt vorgelegt.</span></li>
+            <li><span class="dxb-kodex__n">04</span><span class="dxb-kodex__t" data-i18n="k4.t">Ausreden sind Verbindlichkeiten.</span><span class="dxb-kodex__b" data-i18n="k4.b">Sie verzinsen sich, sie fallen irgendwann fällig, und tilgen kann sie nur einer.</span></li>
+            <li><span class="dxb-kodex__n">05</span><span class="dxb-kodex__t" data-i18n="k5.t">Disziplin ist Zinseszins.</span><span class="dxb-kodex__b" data-i18n="k5.b">Die einzige Metapher, die er aus der Buchhaltung mitgenommen hat. Er nutzt sie täglich.</span></li>
+            <li><span class="dxb-kodex__n">06</span><span class="dxb-kodex__t" data-i18n="k6.t">Niemals zurück in den Winter.</span><span class="dxb-kodex__b" data-i18n="k6.b">Weder klimatisch noch charakterlich. Deutschland wird ausschließlich im Perfekt erwähnt.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY ===== -->
+      <div class="dxb-gallery">
+        <div class="dxb-shot dxb-shot--skyline" role="img" aria-label="Skyline von Dubai"></div>
+        <div class="dxb-shot dxb-shot--yacht" role="img" aria-label="Yacht in der Marina"></div>
+        <div class="dxb-shot dxb-shot--suit" role="img" aria-label="Portrait im Anzug"></div>
+        <div class="dxb-shot dxb-shot--desert" role="img" aria-label="Wüstenlandschaft"></div>
+      </div>
+
+      <!-- ===== STIMMEN ===== -->
+      <section class="dxb-section" id="stimmen">
+        <div class="dxb-wrap">
+          <div class="dxb-section__head dxb-reveal">
+            <p class="dxb-eyebrow" data-i18n="v.eyebrow">Stimmen</p>
+            <h2 class="dxb-h2" data-i18n="v.title">Was die Teilnehmer sagen</h2>
+          </div>
+          <div class="dxb-quotes">
+            <article class="dxb-quote dxb-reveal">
+              <div class="dxb-stars" aria-label="5/5">★★★★★</div>
+              <blockquote data-i18n="q1">„Ich kam mit einer GmbH und ging mit einer Holding. Gefragt hatte ich eigentlich nach dem WLAN-Passwort."</blockquote>
+              <div class="dxb-quote__cite">
+                <span class="dxb-quote__av" aria-hidden="true">MR</span>
+                <span class="dxb-quote__who"><b>Marcel R.</b><span data-i18n="q1.role">Stufe 1 · 29</span></span>
+              </div>
+            </article>
+
+            <article class="dxb-quote dxb-reveal">
+              <div class="dxb-stars" aria-label="5/5">★★★★★</div>
+              <blockquote data-i18n="q2">„Gerd hat mir nicht beigebracht zu verkaufen. Er hat mir beigebracht, aufzuhören zu betteln. Das war teurer, aber ehrlicher."</blockquote>
+              <div class="dxb-quote__cite">
+                <span class="dxb-quote__av" aria-hidden="true">TB</span>
+                <span class="dxb-quote__who"><b>Tobias B.</b><span data-i18n="q2.role">Stufe 2 · 34</span></span>
+              </div>
+            </article>
+
+            <article class="dxb-quote dxb-reveal">
+              <div class="dxb-stars" aria-label="5/5">★★★★★</div>
+              <blockquote data-i18n="q3">„Seit dem Seminar stehe ich um 04:15 Uhr auf. Meine Frau nicht. Aber das ist ihre Reise."</blockquote>
+              <div class="dxb-quote__cite">
+                <span class="dxb-quote__av" aria-hidden="true">KH</span>
+                <span class="dxb-quote__who"><b>Kevin H.</b><span data-i18n="q3.role">Stufe 3 · 41</span></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="dxb-section dxb-section--tight" id="bewerben">
+        <div class="dxb-wrap">
+          <div class="dxb-cta dxb-shot dxb-shot--marina dxb-reveal">
+            <div class="dxb-cta__scrim" aria-hidden="true"></div>
+            <div class="dxb-cta__inner">
+              <p class="dxb-eyebrow dxb-eyebrow--center" data-i18n="cta.eyebrow">Nächster Termin</p>
+              <h2 class="dxb-h2" data-i18n="cta.title">Der Platz kostet nichts.<br />Die Entscheidung schon.</h2>
+              <p class="dxb-lead" style="margin:0 auto;" data-i18n="cta.lead">Bewerbung in 90 Sekunden. Zusage in 48 Stunden. Absage sofort, falls du fragst, ob es Ratenzahlung gibt.</p>
+              <a class="dxb-btn dxb-btn--gold" href="/gregor#kontakt" data-i18n="cta.btn">Jetzt bewerben</a>
+              <p class="dxb-cta__note" data-i18n="cta.note">Formular liegt auf der Hauptseite — auch ein Chad braucht nur ein Kontaktformular.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="dxb-footer">
+      <div class="dxb-wrap">
+        <div class="dxb-footer__inner">
+          <a class="dxb-brand" href="#top">
+            <span class="dxb-brand__mark">GK</span>
+            <span>Gerd Kschmand<span class="dxb-brand__sub">Dubai Era</span></span>
+          </a>
+          <div class="dxb-footer__links">
+            <a href="#tag" data-i18n="nav.day">Der Tag</a>
+            <a href="#seminare" data-i18n="nav.seminars">Seminare</a>
+            <a href="#kodex" data-i18n="nav.code">Der Kodex</a>
+            <a href="/gregor">Corporate Finance</a>
+            <a href="/">Iron &amp; Zen</a>
+          </div>
+        </div>
+        <div class="dxb-footer__meta">
+          <span>© 2026 Gerd Kschmand · Dubai Era</span>
+          <a href="/gregor" data-i18n="foot.back">← Zurück zur seriösen Version</a>
+        </div>
+        <p class="dxb-disclaimer" data-i18n="foot.disclaimer">
+          <b>Satire.</b> Diese Seite ist eine Parodie auf das Genre der deutschsprachigen Dubai- und Vertriebsseminar-Szene.
+          Alle Personen, Seminare, Zitate und Kennzahlen sind frei erfunden. Es besteht keine Verbindung zu und keine
+          Empfehlung durch real existierende Seminaranbieter, Trainer oder Veranstalter.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // ── Sticky nav ────────────────────────────────────────────
+    const nav = document.getElementById('dxb-nav');
+    const onScroll = () => nav?.classList.toggle('is-scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ── Scroll reveal ─────────────────────────────────────────
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+    const revealItems = Array.from(document.querySelectorAll<HTMLElement>('.dxb-reveal'));
+    if (reduced) {
+      revealItems.forEach(el => el.classList.add('is-in'));
+    } else {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      revealItems.forEach(el => io.observe(el));
+    }
+
+    // ── Language toggle (DE default, EN on demand) ────────────
+    // Values are trusted static strings authored here, so innerHTML is safe
+    // and lets translations carry <br>, <em> and <b>.
+    const EN: Record<string, string> = {
+      'nav.day': 'The Day',
+      'nav.seminars': 'Seminars',
+      'nav.code': 'The Code',
+      'nav.voices': 'Voices',
+      'nav.cta': 'Claim a seat',
+
+      'hero.tag': '<i></i> Dubai Marina · 26 °C · No way back',
+      'hero.title': 'The ultimate<br /><em>Chad</em>',
+      'hero.lead': 'Gerd Kschmand never gave up accounting. He simply moved it to 04:15, into a time zone with better weather and a flatter tax curve. Welcome to the Dubai era.',
+      'hero.cta1': 'View seminars',
+      'hero.cta2': 'To the serious version',
+
+      'stat.wake': 'Wake-up time',
+      'stat.excuses': 'Excuses',
+      'stat.sun': 'Days of sun',
+      'stat.seminars': 'Seminars / year',
+
+      'move.eyebrow': 'The Relocation',
+      'move.title': 'From balance sheet to main stage',
+      'move.p1': 'At some point the German accounting code stopped working as a personality. Gerd sold the estate car, kept the calculator and booked a one-way ticket — hand luggage only, because a Chad does not wait at baggage claim.',
+      'move.p2': 'Today he explains VAT filings from the 34th floor, overlooking a skyline built exactly like his upper body: fast, expensive and against all advice.',
+
+      'day.eyebrow': 'The Day',
+      'day.title': '24 hours, 19 of them productive',
+      'day.lead': 'No two days are alike. Except the structure. And breakfast. And training. And the time.',
+      'd1.t': 'Up before the alarm',
+      'd1.b': 'The alarm clock still sits there. Out of respect. It is never needed, but it knows who is in charge.',
+      'd2.t': 'Ice bath',
+      'd2.b': 'In Dubai the ice has to be flown in. Gerd pays for that. Not because it makes sense, but because it is uncomfortable.',
+      'd3.t': 'Push Day',
+      'd3.b': 'It is always push day. Pull day was invented by people who settle for less. Between sets he answers voice notes at a volume that coaches the entire gym.',
+      'd4.t': 'Cash flow on the balcony',
+      'd4.b': 'Black coffee, black numbers. The view costs more than his first car, but it pays for itself — he says, while calculating it.',
+      'd5.t': 'Lunch',
+      'd5.b': 'Steak. Side dish: a second steak. Carbohydrates are for people with nothing planned.',
+      'd6.t': 'Stage. Headset. 400 chairs.',
+      'd6.b': 'No script, no slides, no break. After 90 minutes half the room is standing. After 120 minutes half the room is standing at the sales desk. That is how the genre works.',
+      'd7.t': 'Journaling',
+      'd7.b': 'Three things he is grateful for. All three are KPIs.',
+      'd8.t': 'Lights out',
+      'd8.b': 'Six hours and 45 minutes of sleep. Optimised, tracked, documented. He dreams in English, it sounds more international.',
+
+      'sem.eyebrow': 'The Seminars',
+      'sem.title': 'Three days that will not change your numbers — but your presence',
+      'sem.lead': 'Stage, headset, desert. The full dramaturgy of the German sales circuit, exported to a time zone without winter.',
+      's1.tag': 'Level 1',
+      's1.t': 'Closer Code',
+      's1.b': 'Closing is not an event, it is a character trait. Three days on why &ldquo;I&rsquo;ll think about it&rdquo; is a complete sentence — just not yours.',
+      's1.m1': '3 days',
+      's1.m3': '400 seats',
+      's2.tag': 'Level 2',
+      's2.t': 'Mindset Offensive',
+      's2.b': 'Two nights in the desert, no signal, no comfort. On the second morning somebody cries. On the third, that same person buys level 3.',
+      's2.m1': '2 nights',
+      's2.m3': '60 seats',
+      's3.tag': 'Level 3',
+      's3.b': 'Balance sheets in the morning, pull-ups in the afternoon. The only training where you sign off on both your equity ratio and your body fat percentage.',
+      's3.m1': '5 days',
+      's3.m3': '24 seats',
+
+      'code.eyebrow': 'The Code',
+      'code.title': 'Six rules, zero negotiation',
+      'k1.t': 'No alcohol. Only ambition.',
+      'k1.b': 'Exceptions apply at company parties only, and he does not throw any.',
+      'k2.t': 'Explain yourself and you stop selling.',
+      'k2.b': 'State the price, never justify it. Then stay silent. For minutes, if necessary.',
+      'k3.t': 'The body is the first balance sheet.',
+      'k3.b': 'Reviewed daily, never audited, and presented to everyone unasked.',
+      'k4.t': 'Excuses are liabilities.',
+      'k4.b': 'They accrue interest, they eventually fall due, and only one person can settle them.',
+      'k5.t': 'Discipline is compound interest.',
+      'k5.b': 'The one metaphor he kept from accounting. He uses it daily.',
+      'k6.t': 'Never back to winter.',
+      'k6.b': 'Neither climatically nor characterologically. Germany is referenced exclusively in the past tense.',
+
+      'v.eyebrow': 'Voices',
+      'v.title': 'What participants say',
+      'q1': '&ldquo;I arrived with a limited company and left with a holding structure. I had actually just asked for the Wi-Fi password.&rdquo;',
+      'q1.role': 'Level 1 · 29',
+      'q2': '&ldquo;Gerd did not teach me to sell. He taught me to stop begging. That was more expensive, but more honest.&rdquo;',
+      'q2.role': 'Level 2 · 34',
+      'q3': '&ldquo;Since the seminar I get up at 04:15. My wife does not. But that is her journey.&rdquo;',
+      'q3.role': 'Level 3 · 41',
+
+      'cta.eyebrow': 'Next date',
+      'cta.title': 'The seat costs nothing.<br />The decision does.',
+      'cta.lead': 'Apply in 90 seconds. Answer within 48 hours. Instant rejection if you ask about instalments.',
+      'cta.btn': 'Apply now',
+      'cta.note': 'The form lives on the main page — even a Chad only needs one contact form.',
+
+      'foot.back': '← Back to the serious version',
+      'foot.disclaimer': '<b>Satire.</b> This page is a parody of the German-language Dubai and sales-seminar genre. All people, seminars, quotes and figures are invented. There is no affiliation with, or endorsement by, any real seminar provider, trainer or event organiser.',
+    };
+
+    const TITLES: Record<string, string> = {
+      de: 'Gerd Kschmand — Dubai Era | Der ultimative Chad',
+      en: 'Gerd Kschmand — Dubai Era | The Ultimate Chad',
+    };
+
+    const i18nNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-i18n]'));
+    const DE = new Map<HTMLElement, string>();
+    i18nNodes.forEach(n => DE.set(n, n.innerHTML));
+
+    const langButtons = Array.from(
+      document.querySelectorAll<HTMLButtonElement>('#dxb-lang button')
+    );
+
+    function setLang(lang: string) {
+      for (const node of i18nNodes) {
+        const key = node.dataset.i18n;
+        if (!key) continue;
+        const next = lang === 'en' ? EN[key] : DE.get(node);
+        if (typeof next === 'string') node.innerHTML = next;
+      }
+      document.documentElement.lang = lang;
+      document.title = TITLES[lang] ?? document.title;
+      for (const btn of langButtons) {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', String(active));
+      }
+      try { localStorage.setItem('gk-dubai-lang', lang); } catch {}
+    }
+
+    for (const btn of langButtons) {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang ?? 'de'));
+    }
+
+    let saved = 'de';
+    try { saved = localStorage.getItem('gk-dubai-lang') ?? 'de'; } catch {}
+    setLang(saved === 'en' ? 'en' : 'de');
+  </script>
+</Layout>
