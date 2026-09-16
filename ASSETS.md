@@ -20,3 +20,23 @@ All media files served from `/public/images/`.
 | `images/gallery-retreat-3.jpg` | Image | `index.astro` | Gallery strip — third image (2×2 grid, slot 3) |
 | `images/gallery-retreat-4.jpg` | Image | `index.astro` | Gallery strip — fourth image (2×2 grid, slot 4) |
 | `images/film-retreat.mp4` | Video | `index.astro` | Film section — autoplay ambient video with scrim overlay |
+| `images/dubai-hero-skyline.jpg` | Image | `gregor-dubai.css` | Dubai Era — hero background (Dubai skyline at night, Burj Khalifa) |
+| `images/dubai-marina-night.jpg` | Image | `gregor-dubai.css` | Dubai Era — "Die Auswanderung" split media + CTA panel (Marina at night) |
+| `images/dubai-gym-chad.jpg` | Image | `gregor-dubai.css` | Dubai Era — "Push Day" timeline card (gym training) |
+| `images/dubai-seminar-stage.jpg` | Image | `gregor-dubai.css` | Dubai Era — stage timeline card + "Closer Kodex" seminar card |
+| `images/dubai-desert-suv.jpg` | Image | `gregor-dubai.css` | Dubai Era — "Mindset Offensive" seminar card + gallery (desert dunes) |
+| `images/dubai-yacht.jpg` | Image | `gregor-dubai.css` | Dubai Era — gallery slot 2 (Marina aerial with yachts) |
+| `images/dubai-boardroom.jpg` | Image | `gregor-dubai.css` | Dubai Era — "Cash & Calisthenics" seminar card (modern office) |
+| `images/dubai-chad-suit.jpg` | Image | `gregor-dubai.css` | Dubai Era — gallery slot 3 (businessman portrait) |
+
+## Stock photography
+
+The eight `dubai-*.jpg` files are stock photos from [Unsplash](https://unsplash.com),
+used under the [Unsplash License](https://unsplash.com/license) — free for commercial
+use, no attribution required.
+
+They are referenced from `gregor-dubai.css` as **layered slots**: each `.dxb-shot`
+rule lists the JPG followed by a gradient fallback, so if a file is ever missing the
+page still renders its built-in gradient art instead of breaking. The hero is the same
+idea in two elements — inline SVG skyline art underneath, `.dxb-hero__photo` on top.
+To swap any image, drop a replacement at the same path; no code change needed.
